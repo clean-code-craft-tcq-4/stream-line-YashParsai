@@ -11,10 +11,10 @@ int main()
 
 void test_getSensorData(void)
 {
-	const char* sensor_path = "testSensor.csv";
+	const char* testsensor_path = "testSensor.csv";
 	struct BMSData BMS_Data[50];
 
-	readingCount = getSensorData(sensor1_path, BMS_Data);
+	readingCount = getSensorData(testsensor_path, BMS_Data);
 
 	for(i=0;i<5;i++ )
 	{

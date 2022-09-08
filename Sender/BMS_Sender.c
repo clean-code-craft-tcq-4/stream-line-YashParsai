@@ -52,7 +52,7 @@ void PrintToConsole(char* buffer)
 	printf("%s",buffer);
 }
 
-int main()
+/*int main()
 {
 	struct BMSData BMS_Data[50];
 	int readingCount;
@@ -62,4 +62,4 @@ int main()
 	readingCount = getSensorData(sensor1_path, BMS_Data);
 	PrintBMSData(sensor_id, BMS_Data, readingCount);
 }
-
+*/

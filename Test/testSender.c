@@ -1,18 +1,16 @@
 #include <stdio.h>
+#include <assert.h>
 #include "../Sender/BMS_Sender.h"
 
 int dummyTemp[5] = {5,6,7,8,9};
 int dummySOC[5] = {20,21,22,23,24};
 
-int main()
-{
-	test_getSensorData();
-}
-
 void test_getSensorData(void)
 {
 	const char* testsensor_path = "testSensor.csv";
 	struct BMSData BMS_Data[50];
+	int readingCount;
+	int i;
 
 	readingCount = getSensorData(testsensor_path, BMS_Data);
 
@@ -25,3 +23,10 @@ void test_getSensorData(void)
 		}
 	}
 }
+
+int main()
+{
+	test_getSensorData();
+}
+
+

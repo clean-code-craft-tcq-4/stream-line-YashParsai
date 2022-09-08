@@ -7,7 +7,7 @@ int dummySOC[5] = {20,21,22,23,24};
 
 void test_getSensorData(void)
 {
-	const char* testsensor_path = "testSensor.csv";
+	const char* testsensor_path = "../Test/testSensor.csv";
 	struct BMSData BMS_Data[50];
 	int readingCount;
 	int i;

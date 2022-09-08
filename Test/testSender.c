@@ -16,6 +16,7 @@ void test_getSensorData(void)
 
 	for(i=0;i<5;i++ )
 	{
+		printf("%d %d\n",BMS_Data[i].temp, BMS_Data[i].soc);
 		if(!((BMS_Data[i].temp == dummyTemp[i]) &&
 		     (BMS_Data[i].soc  == dummySOC[i])  ))
 		{

@@ -2,9 +2,6 @@
 #include <assert.h>
 #include "BMS_Sender.h"
 
-int dummyTemp[5] = {5,6,7,8,9};
-int dummySOC[5] = {20,21,22,23,24};
-
 void test_getSensorData(void)
 {
 	const char* testsensor_path = "testSensor.csv";
@@ -14,15 +11,10 @@ void test_getSensorData(void)
 
 	getRandomSensorData(BMS_Data);
 
-	for(i=0;i<5;i++ )
-	{
-		printf("%d %d\n",BMS_Data[i].temp, BMS_Data[i].soc);
-		if(!((BMS_Data[i].temp == dummyTemp[i]) &&
-		     (BMS_Data[i].soc  == dummySOC[i])  ))
-		{
-			assert(0);
-		}
-	}
+	assert(BMS_Data.temp[10] <= TEMP_MAX);
+	assert(BMS_Data.temp[5]  >= TEMP_MIN);
+	assert(BMS_Data.soc[45]  <= SOC_MAX);
+	assert(BMS_Data.soc[1]  >= SOC_MIN);
 }
 
 int main()

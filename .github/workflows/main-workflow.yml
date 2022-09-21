@@ -29,9 +29,6 @@ jobs:
         name: coverage
         path: ./*.html
         retention-days: 21
-        
-    - name: Build Sender
-      run: mvn compile exec:java -Dexec.mainClass="Sender.BMS_Sender"
       
     - name: Build Receiver
       run: javac receiver/ReceiveData.java

@@ -31,7 +31,7 @@ jobs:
         retention-days: 21
       
     - name: Build Receiver
-      run: javac receiver/ReceiveData.java
+      run: javac src/main/java/Reciever/ReceiverServiceImpl
       
     - name: Build
       run: mvn compile exec:java -Dexec.mainClass="Sender.BMS_Sender"  | java -ea -classpath . src/main/java/Reciever/ReceiverServiceImpl

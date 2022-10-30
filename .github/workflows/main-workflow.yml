@@ -33,5 +33,5 @@ jobs:
     - name: Build Receiver
       run: javac src/main/java/Reciever/ReceiverServiceImpl.java src/main/java/Reciever/BatteryProperties.java src/main/java/Reciever/CheckBatteryProperties.java src/main/java/Reciever/PrintProperty.java src/main/java/Reciever/ReportBatteryPropeties.java
       
-    - name: Build
-      run: mvn compile exec:java -Dexec.mainClass="Sender.BMS_Sender"  | java -ea -classpath . src/main/java/Reciever/ReceiverServiceImpl
+    - name: run
+      run: mvn compile exec:java -Dexec.mainClass="Sender.BMS_Sender"  | java -ea -cp "src" main.java.Reciever.ReceiverServiceImpl

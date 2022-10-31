@@ -45,4 +45,4 @@ jobs:
     - name: Build and Test
       run: mvn -f pom.xml test
     - name: Build and main class
-      run: mvn -f ./pom.xml compile exec:java -Dexec.mainClass="Reciever.ReceiverServiceImpl" -Dexec.args="srno,temperature,stateofcharge 1,20,10 2,23,12 3,26,14 4,25,18 5,29,11 6,32,20 7,35,26 8,39,29 9,28,17"
+      run: mvn -f ./pom.xml compile exec:java -Dexec.mainClass="Reciever.ReceiverServiceImpl" -Dexec.args="1,20,10 2,23,12 3,26,14 4,25,18 5,29,11 6,32,20 7,35,26 8,39,29 9,28,17"

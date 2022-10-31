@@ -42,8 +42,4 @@ jobs:
         name: coverage
         path: ./target/site/jacoco
         retention-days: 21
-    - name: Build Reciever
-      run: javac src/main/java/Reciever/ReceiverServiceImpl.java src/main/java/Reciever/BatteryProperties.java src/main/java/Reciever/CheckBatteryProperties.java src/main/java/Reciever/PrintProperty.java src/main/java/Reciever/ReportBatteryPropeties.java
-    - name: Run
-      run: java -ea -classpath . src.main.java.Reciever.ReceiverServiceImpl 
    

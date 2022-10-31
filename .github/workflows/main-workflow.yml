@@ -46,4 +46,4 @@ jobs:
     - name: Build Sender and Receiver Packages
       run:  mvn -B package --file pom.xml -Dmaven.test.skip=true
     - name: Pipe sender to reciever
-      run: ./testchecker | mvn compile exec:java -Dexec.mainClass="Reciever.ReceiverServiceImpl"
+      run: ./testchecker | java -ea -classpath . Reciever.ReceiverServiceImpl
